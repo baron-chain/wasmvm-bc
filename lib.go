@@ -17,8 +17,6 @@ type VM struct {
 	printDebug bool
 }
 
-// NewVM creates a new VM.
-//
 // `dataDir` is a base directory for Wasm blobs and various caches.
 // `supportedCapabilities` is a comma separated list of capabilities suppored by the chain.
 // `memoryLimit` is the memory limit of each contract execution (in MiB)
