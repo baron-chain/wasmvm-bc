@@ -57,10 +57,6 @@ func (vm *VM) Pin(checksum Checksum) error {
 	return api.Pin(vm.cache, checksum)
 }
 
-// Unpin removes the guarantee of a contract to be pinned (see Pin).
-// After calling this, the code may or may not remain in memory depending on
-// the implementor's choice.
-// Unpin is idempotent.
 func (vm *VM) Unpin(checksum Checksum) error {
 	return api.Unpin(vm.cache, checksum)
 }
