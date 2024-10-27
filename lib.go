@@ -12,9 +12,6 @@ import (
 	"github.com/CosmWasm/wasmvm/types"
 )
 
-// VM is the main entry point to this library.
-// You should create an instance with its own subdirectory to manage state inside,
-// and call it for all cosmwasm code related actions.
 type VM struct {
 	cache      api.Cache
 	printDebug bool
