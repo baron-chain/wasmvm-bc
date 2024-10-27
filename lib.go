@@ -191,12 +191,6 @@ func (vm *VM) Query(
 	return resp.Ok, gasUsed, nil
 }
 
-// Migrate will migrate an existing contract to a new code binary.
-// This takes storage of the data from the original contract and the Checksum of the new contract that should
-// replace it. This allows it to run a migration step if needed, or return an error if unable to migrate
-// the given data.
-//
-// MigrateMsg has some data on how to perform the migration.
 func (vm *VM) Migrate(
 	checksum Checksum,
 	env types.Env,
