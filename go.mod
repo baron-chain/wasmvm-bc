@@ -1,4 +1,4 @@
-module github.com/CosmWasm/wasmvm
+module github.com/baron-chain/wasmvm-bc
 
 go 1.18
 
