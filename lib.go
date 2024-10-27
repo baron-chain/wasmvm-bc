@@ -49,13 +49,6 @@ func (vm *VM) RemoveCode(checksum Checksum) error {
 	return api.RemoveCode(vm.cache, checksum)
 }
 
-// GetCode will load the original Wasm code for the given checksum.
-// This will only succeed if that checksum was previously returned from
-// a call to StoreCode.
-//
-// This can be used so that the (short) checksum is stored in the iavl tree
-// and the larger binary blobs (wasm and compiled modules) are all managed
-// by libwasmvm/cosmwasm-vm (Rust part).
 func (vm *VM) GetCode(checksum Checksum) (WasmCode, error) {
 	return api.GetCode(vm.cache, checksum)
 }
