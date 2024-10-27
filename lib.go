@@ -70,14 +70,6 @@ func (vm *VM) GetMetrics() (*types.Metrics, error) {
 	return api.GetMetrics(vm.cache)
 }
 
-// Instantiate will create a new contract based on the given Checksum.
-// We can set the initMsg (contract "genesis") here, and it then receives
-// an account and address and can be invoked (Execute) many times.
-//
-// Storage should be set with a PrefixedKVStore that this code can safely access.
-//
-// Under the hood, we may recompile the wasm, use a cached native compile, or even use a cached instance
-// for performance.
 func (vm *VM) Instantiate(
 	checksum Checksum,
 	env types.Env,
