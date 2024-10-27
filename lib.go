@@ -112,12 +112,6 @@ func (vm *VM) Instantiate(
 	return result.Ok, gasUsed, nil
 }
 
-// Execute calls a given contract. Since the only difference between contracts with the same Checksum is the
-// data in their local storage, and their address in the outside world, we need no ContractID here.
-// (That is a detail for the external, sdk-facing, side).
-//
-// The caller is responsible for passing the correct `store` (which must have been initialized exactly once),
-// and setting the env with relevant info on this instance (address, balance, etc)
 func (vm *VM) Execute(
 	checksum Checksum,
 	env types.Env,
