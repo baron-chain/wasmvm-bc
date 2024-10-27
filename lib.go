@@ -228,12 +228,6 @@ func (vm *VM) Migrate(
 	return resp.Ok, gasUsed, nil
 }
 
-// Sudo allows native Go modules to make priviledged (sudo) calls on the contract.
-// The contract can expose entry points that cannot be triggered by any transaction, but only via
-// native Go modules, and delegate the access control to the system.
-//
-// These work much like Migrate (same scenario) but allows custom apps to extend the priviledged entry points
-// without forking cosmwasm-vm.
 func (vm *VM) Sudo(
 	checksum Checksum,
 	env types.Env,
