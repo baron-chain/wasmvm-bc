@@ -53,9 +53,6 @@ func (vm *VM) GetCode(checksum Checksum) (WasmCode, error) {
 	return api.GetCode(vm.cache, checksum)
 }
 
-// Pin pins a code to an in-memory cache, such that is
-// always loaded quickly when executed.
-// Pin is idempotent.
 func (vm *VM) Pin(checksum Checksum) error {
 	return api.Pin(vm.cache, checksum)
 }
