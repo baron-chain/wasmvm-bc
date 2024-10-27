@@ -154,9 +154,6 @@ func (vm *VM) Execute(
 	return result.Ok, gasUsed, nil
 }
 
-// Query allows a client to execute a contract-specific query. If the result is not empty, it should be
-// valid json-encoded data to return to the client.
-// The meaning of path and data can be determined by the code. Path is the suffix of the abci.QueryRequest.Path
 func (vm *VM) Query(
 	checksum Checksum,
 	env types.Env,
